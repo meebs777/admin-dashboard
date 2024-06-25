@@ -18,6 +18,7 @@
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    height: 100vh;
   }
   /*
     5. Improve media defaults
@@ -44,3 +45,27 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  .container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr
+  }
+
+
+  .sidebar {
+    background-color: aquamarine;
+    grid-column: 1;
+    grid-row: 1/3;
+    display: grid;
+    align-content: start;
+    gap: 20px;
+    font-size: 1.7rem;
+    padding: 30px;
+  }
+
+  .sidebar :nth-child(7) {
+    margin-bottom: 75px;
+  }
+
